@@ -1,0 +1,21 @@
+import cv2
+
+username = 'jonasml'
+password = 'jonasml0104'
+endpoint = 'stream1'
+ip = '192.168.0.186:554'
+
+cap = cv2.VideoCapture(f'rtsp://{username}:{password}@{ip}/{endpoint}')
+
+while True:
+    ret, frame = cap.read()
+    if ret:
+        cv2.imshow('RTSP Stream', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    else:
+        print("Failed to capture frame")
+        break
+
+cap.release()
+cv2.destroyAllWindows()

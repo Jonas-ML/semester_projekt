@@ -1,9 +1,9 @@
 import cv2
 
 username = 'jonasml'
-password = 'jonasml0104'
+password = ''
 endpoint = 'stream1'
-ip = '192.168.0.186:554'
+ip = ''
 
 cap = cv2.VideoCapture(f'rtsp://{username}:{password}@{ip}/{endpoint}')
 

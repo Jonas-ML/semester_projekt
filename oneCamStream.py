@@ -3,9 +3,9 @@ from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
 username = 'jonasml'
-password = 'jonasml0104'
+password = ''
 endpoint = 'stream1'
-ip = '192.168.0.186:554'
+ip = ''
 
 cap = None
 
